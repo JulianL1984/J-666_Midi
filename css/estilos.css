@@ -8,84 +8,10 @@
 
 body {
   align-items: center;
-  background: #000000; 
+  background: #ffffff; 
   background: -moz-linear-gradient(left, #060606 0%, #121212 100%); 
-  background: -webkit-linear-gradient(left, #00cf07 0%,#04f800 100%); 
-  background: linear-gradient(to right, #000000 0%,#1e1d1d 100%);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-family: "Metal Mania", system-ui;
-  min-height: 100vh;
-}
-
-h1 {
-  color: var(--blanco);
-  margin-bottom: 20px;
-  font-size: 4.5rem;
-  font-weight: 600;
-}
-
-.teclado {
-  background: linear-gradient(to bottom, #000000 0%,#000000 100%);
-  box-shadow: 6px 8px 0 6px #6b0000, 10px 10px 10px #ffffff;
-  border-radius: 30px;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 10px;
-}
-
-.tecla {
-  background-color: var(--blanco);
-  border-radius: 30px;
-  box-shadow: 3px 3px 0 var(--rojo);
-  color: var(--rojo-oscuro);
-  cursor: pointer;
-  height: 120px;
-  font-size: 1.75em;
-  font-weight: bold;
-  line-height: 120px;
-  text-align: center;
-  width: 120px;
-}
-
-.tecla.activa,
-.tecla:active {
-  background-color: var(--rojo);
-  border: 4px solid var(--blanco);
-  box-shadow: 3px 3px 0 var(--rojo-oscuro) inset;
-  color: var(--blanco);
-  outline: none;
-}
-
-.tecla.focus,
-.tecla:focus {
-  outline: none;
-  box-shadow: 1px 1px 10px var(--luz);
-}
-
-.tecla.active:focus,
-.tecla:active:focus {
-  box-shadow: 3px 3px 0 var(--rojo-oscuro) inset, 1px 1px 10px var(--luz);
-}
-
-/* Responsividad */
-
-:root {
-  --gris: #aaa;
-  --rojo: #e93d50;
-  --rojo-oscuro: #af303f;
-  --blanco: #fff;
-  --luz: rgb(229, 255, 0);
-}
-
-body {
-  align-items: center;
-  background: #000000; 
-  background: -moz-linear-gradient(left, #060606 0%, #121212 100%); 
-  background: -webkit-linear-gradient(left, #080808 0%,#000000 100%); 
-  background: linear-gradient(to right, #000000 0%,#1e1d1d 100%);
+  background: -webkit-linear-gradient(left, #0e0e0e 0%,#000000 100%); 
+  background: linear-gradient(to right, #000000 0%,#00197c 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -158,20 +84,38 @@ h1 {
   .teclado {
     grid-template-columns: repeat(3, 1fr); /* Mantener 3 columnas */
     width: 100%; /* Asegurar que ocupe todo el ancho disponible */
-    max-width: 360px; /* Limitar el ancho máximo del contenedor en pantallas pequeñas */
+    max-width: 300px; /* Limitar el ancho máximo del teclado */
     margin: 0 auto; /* Centrar el teclado */
   }
 
   /* Ajuste de las teclas para pantallas pequeñas */
   .tecla {
-    width: 90px; /* Ajustar el ancho de las teclas */
-    height: 90px; /* Ajustar la altura de las teclas */
-    font-size: 1.2rem; /* Reducir el tamaño de la fuente para dispositivos pequeños */
-    line-height: 90px; /* Asegurar que el texto esté centrado verticalmente */
+    width: 70px; /* Reducir el ancho de las teclas */
+    height: 70px; /* Reducir la altura de las teclas */
+    font-size: 1rem; /* Reducir el tamaño de la fuente */
+    line-height: 70px; /* Ajustar line-height para centrar verticalmente */
   }
 
   h1 {
     font-size: 2.5rem; /* Reducir el tamaño del título para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajuste adicional para pantallas muy pequeñas */
+  .teclado {
+    max-width: 250px; /* Limitar más el ancho del teclado */
+  }
+
+  .tecla {
+    width: 60px; /* Reducir aún más el ancho de las teclas */
+    height: 60px; /* Reducir la altura de las teclas */
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    line-height: 60px; /* Ajustar line-height para centrar el texto */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Ajuste adicional del título para pantallas muy pequeñas */
   }
 }
 
