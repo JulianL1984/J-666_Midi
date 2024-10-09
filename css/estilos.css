@@ -11,7 +11,7 @@ body {
   background: #ffffff; 
   background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 100%); 
   background: -webkit-linear-gradient(left, #f6f2f2 0%,#f0efef 100%); 
-  background: linear-gradient(to right, #323131 0%,#00197c 100%);
+  background: linear-gradient(to right, #011f69 0%,#070707 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
