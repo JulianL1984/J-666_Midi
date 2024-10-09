@@ -72,3 +72,13 @@ h1 {
 .tecla:active:focus {
   box-shadow: 3px 3px 0 var(--rojo-oscuro) inset, 1px 1px 10px var(--luz);
 }
+
+/*Responsividad*/
+
+@media (max-width: 768px) {
+  .cabecera {
+      flex-direction: column; 
+      font-weight: 100;
+      gap: 2%;
+  }
+}
