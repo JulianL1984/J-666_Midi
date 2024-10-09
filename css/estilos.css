@@ -82,7 +82,7 @@ h1 {
   /* Centrando el teclado (midi) en pantallas pequeñas */
   .teclado {
     grid-template-columns: repeat(3, 1fr); /* Cambia a dos columnas para adaptarse mejor a pantallas pequeñas */
-    width: 90%; /* Ajustar el ancho del teclado */
+    width: 80%; /* Ajustar el ancho del teclado */
     margin: 0 auto; /* Centrar horizontalmente */
   }
 
